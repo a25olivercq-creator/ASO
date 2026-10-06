@@ -1,0 +1,6 @@
+servidor,directorio,tamano_mb,estado
+srv-db01,/var/lib/mysql,15400,OK
+srv-web01,/var/www/html,2300,OK
+srv-db01,/etc,150,OK
+srv-app01,/opt/app,8900,FAILED
+srv-web01,/var/log,4500,OK
