@@ -1,0 +1,7 @@
+=== RESUMEN DE RESPALDOS ===
+Total MB respaldados por servidor (Solo OK):
+- srv-db01 : 15550 MB (15.19 GB)
+- srv-web01 : 6800 MB (6.64 GB)
+
+Rutas con fallos de respaldo (Atención requerida):
+* srv-app01: FAILED
