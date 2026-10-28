@@ -42,8 +42,8 @@ if path.exists (PathCSV):
         archivo.write("=== RESUMEN DE RESPALDOS ===\n")
         archivo.write("Total MB respaldados por servidor (Solo OK):\n")
         for k,v in dRes.items():
-            archivo.write(f"- {k} : {v} MB ({v/100} GB)\n")
-        archivo.write("Rutas con fallos de respaldo (Atención requerida):\n")
+            archivo.write(f"- {k} : {v} MB ({v/1024:.2f} GB)\n")
+        archivo.write("\nRutas con fallos de respaldo (Atención requerida):\n")
         for k,v in dfail.items():
             archivo.write(f"* {k}: {v}\n")  
         else:
