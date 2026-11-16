@@ -1,4 +1,4 @@
-# Script que da de alta usuarios desde un css separado por comas
+# Script que da de alta usuarios desde un csv separado por comas
 
 # Leemos el archivo y lo pasamos a una lista de lineas
 

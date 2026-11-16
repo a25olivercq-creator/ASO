@@ -1,0 +1,37 @@
+def Grupos():
+
+    g=input("Introduce grupo: ")
+    encontrado=False
+
+    with open ("/etc/group") as fr:
+        glines=fr.readlines()
+
+    for l in glines:
+        ll = l.strip().split(":")
+        if ll[0]==g:
+            # print(ll)
+            encontrado =True
+            idg=ll[2]
+            # print(idg)
+            if ll[3]!='':
+                lcontas=ll[3]
+            else:
+                lcontas=None
+            # print(lcontas)
+            conta=[]
+            with open ("/etc/passwd") as fr:
+                plines=fr.readlines()
+            for lp in plines:
+                lp = lp.strip().split(":")
+                if idg==lp[3]:
+                    conta.append(lp[0])
+                else:
+                    pass
+            salida=f"Nombre: {g}\nExiste en el equipo: Si\nGrupo principal de {', '.join(conta)}\nGrupo secundario de {lcontas}"
+    if not encontrado:
+        salida="el grupo introducido NO existe"
+
+    return(salida)
+
+resultado = Grupos()
+print(resultado)
